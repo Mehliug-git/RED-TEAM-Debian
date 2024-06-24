@@ -4,14 +4,18 @@ sudo apt install default-jdk -y
 sudo apt install openjdk-17-jdk -y
 sudo apt install nmap -y
 
-git clone https://github.com/aircrack-ng/aircrack-ng
-cd aircrack-ng
-autoreconf -i
-./configure --with-experimental
-make
-make install
-ldconfig
-cd ..
+#Aircrack
+sudo apt-get install build-essential autoconf automake libtool pkg-config libnl-3-dev libnl-genl-3-dev libssl-dev ethtool shtool rfkill zlib1g-dev libpcap-dev libsqlite3-dev libpcre2-dev libhwloc-dev libcmocka-dev hostapd wpasupplicant tcpdump screen iw usbutils expect -y
+wget https://download.aircrack-ng.org/aircrack-ng-1.7.tar.gz
+tar -zxvf aircrack-ng-1.7.tar.gz
+cd aircrack-ng-1.7
+sudo autoreconf -i
+sudo ./configure --with-experimental
+sudo make
+sudo make install
+sudo ldconfig
+
+
 
 echo 'deb http://download.opensuse.org/repositories/shells:/fish:/release:/3/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/shells:fish:release:3.list
 curl -fsSL https://download.opensuse.org/repositories/shells:fish:release:3/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_fish_release_3.gpg > /dev/null
