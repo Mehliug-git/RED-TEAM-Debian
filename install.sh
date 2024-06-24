@@ -1,5 +1,5 @@
 sudo apt update -y && sudo apt full-upgrade -y && sudo apt autoremove -y
-sudo apt install python3 python3-pip perl git wget curl gnupg2 autoconf automake libtool shtool openssl pkg-config docker.io -y
+sudo apt install python3 python3-pip perl git wget curl gnupg2 autoconf automake libtool shtool openssl pkg-config docker.io denian-goodies -y
 sudo apt install default-jdk -y 
 sudo apt install openjdk-17-jdk -y
 sudo apt install nmap -y
